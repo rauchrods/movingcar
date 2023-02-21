@@ -1,0 +1,120 @@
+.maincon{
+   background-color: lemonchiffon;
+   position: relative;
+   top: 0;
+   height: 100vh;
+   border: 5px solid black;
+}
+body{
+    margin: 0;
+    margin: 1px solid black;
+}
+.carcontainer{
+    display: inline-block;
+    border: 1px solid black;
+    position: fixed;
+    top:25%;
+    animation-name: carmovement;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.wheel1, .wheel2 {
+    position: absolute;
+    animation-name:wheelrotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: 50% 50%;
+}
+/* .wheel1>img{
+    border: 1px solid black;
+} */
+.wheel1{
+    top:48px;
+    left:16px;
+}
+.wheel2{
+    top:48px;
+    left:169px;
+}
+
+@keyframes wheelrotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(3600deg);
+    }
+    21%{
+        transform: rotate(0deg);
+    }
+       
+    40%{
+        transform: rotate(1000deg);
+    }
+    41%{
+        transform: rotate(0deg);
+    }
+    60%{
+        transform: rotate(3600deg);
+    }
+    61%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: rotate(3600deg);
+    }
+    81%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(3600deg);
+    }
+      
+}
+
+@keyframes carmovement{
+    0%{
+        top: 25%;
+        left:0;
+    }
+    20%{
+        top: 25%;
+        left: 87%;
+        transform: rotate(0deg);
+    }
+    21%{
+        transform: rotate(-90deg);
+    }
+    40%{
+        top: 0%;
+        left: 87%;
+        transform: rotate(-90deg);
+    }
+    41%{
+        transform: rotate(-180deg);
+    }
+    60%{
+        top: 0%;
+        left: 0;
+        transform: rotate(-180deg);
+    }
+    61%{
+        transform: rotate(-270deg);
+    }
+    80%{
+        top: 87%;
+        left: 0;
+        transform: rotate(-270deg);
+    }
+    81%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        top: 87%;
+        left: 87%;
+        transform: rotate(-360deg);
+    }
+ 
+}
